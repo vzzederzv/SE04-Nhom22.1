@@ -1,0 +1,612 @@
+DEBUG      root            <module>   1089:  - locale: en_US
+INFO       Gui.ConfigWindow createWidgetFromDefinitionDict 398 :  - Creating configuration window
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = "D:/Eclipse_Workspace/DXF2GCODE/trunk/dxf"'], min = None, max = None, comment = By default look for DXF files in this directory.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = "D:"'], min = None, max = None, comment = Export generated gcode by default to this directory.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = "C:/Program Files (x86'], min = None, max = None, comment = pstoedit is an external tool to import *.ps (postscript) files and convert them to DXF, in order to import them in dxf2gcode.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 1', 'default = "X"'], min = 1, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 1', 'default = "Y"'], min = 1, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 1', 'default = "Z"'], min = 1, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = 0'], min = None, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = 0'], min = None, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = 15.0'], min = None, max = None, comment = Third axis' coordinate at which it can do rapid move.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = 3.0'], min = None, max = None, comment = Third axis' margin for which it needs to do a slow move.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = 0.0'], min = None, max = None, comment = The top third axis' coordinate of the workpiece.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = -1.5'], min = None, max = None, comment = Relative depth for each cut (third axis' coordinate will be decreased by this value at each step).
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = -3.0'], min = None, max = None, comment = Relative final third axis' depth.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = 400'], min = None, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = 150'], min = None, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = Enable 3D representation of the piece (requires PyQt5 and OpenGL)
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = When enabled, the shapes that are disabled are still shown on the graphic view.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = When enabled, export path is live updated on the graphic view.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = Divide the lines in 2 parts, in order to start the cutting in the middle of a line (usefull for cutter compensation)
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = Automatically enable cutter compensation for all the shapes (G41 & G42)
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['milling', 'lathe', 'drag_knife'], min = None, max = None, comment = Machine types supported: milling; lathe; drag_knife
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['mm', 'in'], min = None, max = None, comment = The unit used for all values in this file
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = Write output to stdout (console), instead of a file. May be used to interface directly with Linux CNC, for example.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = If not checked, DXF2GCODE will create a virtual path for G41 and G42 command. And output will be set to G40; i.e. it will create the path that normally your machine would create with it's cutter compensation.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 0', 'max = 360', 'default = 20'], min = 0.0, max = 360.0, comment = drag_angle: if angle of movement exceeds this angle (in degrees), the tool retracts to dragDepth (The dragDepth is given by axis3_slice_depth parameter).
+ This parameter depends on the knife that you are using. A bigger knife cannot make small corners like a smaller knife. You will simply break your knife or destroy your working piece. Now, if the angle your knife has to make is bigger than this angle it will move to a different depth (a less deep position) such that the knife will experience less resistance but still has some (otherwise it will not change its angle at all, whence DRAG knife).
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = If enabled, it will by default check the TSP for all the shapes in the treeview.
+ If disabled and no shape is checked for TSP optimisation in the listbox, the export order will be as defined in the listbox.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['CONSTRAIN_ORDER_ONLY', 'CONSTRAIN_PLACE_AFTER'], min = None, max = None, comment = Path optimizer behaviour:
+ - CONSTRAIN_ORDER_ONLY: fixed Shapes and optimized Shapes can be mixed. Only order of fixed shapes is kept
+ - CONSTRAIN_PLACE_AFTER: optimized Shapes are always placed after any fixed Shape
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 0', 'max = 1', 'default = 0.95'], min = 0.0, max = 1.0, comment = This is a value of how much it should deviate the order with each iteration. The higher the value the more you allow alterations.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 0', 'max = 10000', 'default = 20'], min = 0, max = 10000, comment = Number of people the population has for path optimization (values higher than 200 can make everything slow).
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 1', 'max = 1000000', 'default = 300'], min = 1, max = 1000000, comment = Maximum number of iterations that will be done. This is internally also calculated, based on the number of shapes to optimize.
+ Values higher than 10000 can take really long to solve the TSP and are not recommended.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['ordered', 'random', 'heuristic'], min = None, max = None, comment = Different methods to initialize the population for the TSP optimizer.
+ - Ordered will start with the defined one in the listbox
+ - Random just random
+ - Heuristic will search the nearest neighbors and starts with the resulting order.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 0', 'max = 1', 'default = 0.001'], min = 0.0, max = 1.0, comment = Tolerance at which similar points will be interpreted as similar
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 1', 'max = 3', 'default = 3'], min = 1, max = 3, comment = Types of check performed during spline conversion:
+ 1: Checking for Nurbs degree (polygon degree) and similar knots consistence
+ 2: Checking for Nurbs degree (polygon degree) and similar control points
+ 3: Performes check 1 and check 2
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 0', 'max = 1', 'default = 0.001'], min = 0.0, max = 1.0, comment = This is the tolerance which is used to fit the converted lines and arc segments to the converted NURBS.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = If checked, the elements (shape, ...) which are part of a block will be inserted on the layer that belongs to the block (even though the elements might be defined on a different layers)
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = ":"'], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = To be used in the DXF layer name. See DXF2GCODE' wiki for more information.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['', 'diameter', 'speed', 'start_radius'], min = None, max = None, comment = Tools table: define here the tools used for milling:
+ - name: this is the number of the tool, it will be used directly in the GCODE (eg 20 for tool T20)
+ - diameter: diameter of the tool
+ - speed: spindle speed in rpm
+ - start_radius: start radius for tool compensation when using G41 / G42 moves
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['', 'gcode'], min = None, max = None, comment = Define here custom GCODE actions:
+ - name: this is the unique name of the action
+ - gcode: the text that will be inserted in the final program (each new line is also translated as a new line in the output file)
+ Custom actions can be inserted in the program by using right-click contextual menu on the treeview.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default = "logfile.txt"'], min = None, max = None, comment = Logging to textfile is enabled automatically for now
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'], min = None, max = None, comment = This really goes to stderr
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'], min = None, max = None, comment = Log levels are, in increasing importance: DEBUG; INFO; WARNING; ERROR; CRITICAL
+ Log events with importance >= loglevel are logged to the corresponding output
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['DEBUG', 'INFO', 'WARNING', 'ERROR', 'CRITICAL'], min = None, max = None, comment = Logging level for the message window
+DEBUG      PostPro.PostProcessorConfig load_config 224 :  - read existing varspace 'C:/Users/ADMIN/Desktop/DXF2GCODE/DXF2GCODE\postpro_config\postpro_config.cfg'
+INFO       Gui.ConfigWindow createWidgetFromDefinitionDict 398 :  - Creating configuration window
+DEBUG      PostPro.PostProcessorConfig load_config 224 :  - read existing varspace 'C:/Users/ADMIN/Desktop/DXF2GCODE/DXF2GCODE\postpro_config\postpro_config.cfg'
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default="G-CODE for LinuxCNC"'], min = None, max = None, comment = This title is shown in the export dialog and is used by the user to differentiate between the possible different postprocessor configurations.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=".ngc"'], min = None, max = None, comment = This extension is used in the save file export dialog.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['g-code', 'dxf', 'text'], min = None, max = None, comment = This type defines the output format used in the export dialog.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = Used to switch between absolute (G90) and relative/incremental coordinates (G91).
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = If cutter compensation is used, e.g. G41 or G42, this option cancels the compensation when there is a momevement on the 3rd-axis, and enables the compensation again afterwards.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = If cutter compensation is used (G41-G42) this will apply the cutter compensation outside the piece (i.e. it is applied before it is at milling depth).
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = Used for dxfs which only support arcs that are in counterclockwise direction. Turning this on for normal G-Code will result in unintended output.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 0', 'default=10000'], min = 0.0, max = None, comment = If an arc's radius exceeds this value, then it will be exported as a line.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default="G21 (Units in millimeters'], min = None, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default="G20 (Units in inches'], min = None, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default="G90 (Absolute programming'], min = None, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default="G91 (Incremental programming'], min = None, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default="G64 (Default cutting'], min = None, max = None, comment = This is code which will be written at the beginning of the exported file.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default="M2 (Program end'], min = None, max = None, comment = This is code which will be written at the end of the exported file.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = If True 1.000 will be written as +1.000
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 0', 'default=4'], min = 0, max = None, comment = Gives the indentation for the values.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = If true all values will be padded with zeros up to pre_decimals (e.g. 0001.000).
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['min = 0', 'default=3'], min = 0, max = None, comment = Gives the accuracy of the output after which it will be rounded.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = If false e.g. 1.000 will be given as 1 only.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default="."'], min = None, max = None, comment = Give the separator which is used in the exported values (e.g. '.' or ',').
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = [], min = None, max = None, comment = Enables line numbers into the exported G-Code file.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=10'], min = None, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=10'], min = None, max = None, comment = 
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=T%tool_nr M6%nlS%speed%nl'], min = None, max = None, comment = This will be done after each layer, if different tools are used.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=F%feed%nl'], min = None, max = None, comment = This will be done after each change between cutting in plane or cutting in depth.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=G0 X%XE Y%YE%nl'], min = None, max = None, comment = This will be done between each shape to cut.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=G0 Z%ZE %nl'], min = None, max = None, comment = This will be done between each shape to cut.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default= G1 X%XE Y%YE%nl'], min = None, max = None, comment = This will be used for shape cutting.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default= G1 Z%ZE%nl'], min = None, max = None, comment = This will be used for shape cutting.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=G2 X%XE Y%YE I%I J%J%nl'], min = None, max = None, comment = This will be used for shape cutting.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=G3 X%XE Y%YE I%I J%J%nl'], min = None, max = None, comment = This will be used for shape cutting.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=G40%nl'], min = None, max = None, comment = Generally set to G40%nl
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=G41%nl'], min = None, max = None, comment = Generally set to G41%nl
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=G42%nl'], min = None, max = None, comment = Generally set to G42%nl
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=M3 M8%nl'], min = None, max = None, comment = This will be done before starting to cut a shape or a contour.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=M9 M5%nl'], min = None, max = None, comment = This will be done after cutting a shape or a contour.
+DEBUG      Gui.ConfigWindow configspecParser 616 :  - configspecParser(): exctracted option elements = ['default=%nl(%comment'], min = None, max = None, comment = Defines comments' format. Comments are written at some places during the export in order to make the g-code better readable.
+DEBUG      root            <module>   1133:  - Started with following options:
+ArgumentParser(prog='dxf2gcode.exe', usage=None, description=None, formatter_class=<class 'argparse.HelpFormatter'>, conflict_handler='error', add_help=True)
+INFO       root            OpenFileDialog 741 :  - File: C:/Users/ADMIN/Desktop/DXF2GCODE/knot_004.DXF selected
+INFO       root            load       790 :  - Loading file: C:/Users/ADMIN/Desktop/DXF2GCODE/knot_004.DXF
+DEBUG      DxfImport.Import Get_Line_Pairs 191 :  - Did read 6202 of linepairs from DXF
+INFO       DxfImport.Import __init__   79  :  - Reading DXF Structure
+INFO       DxfImport.Import Read_Blocks 294 :  - Reading Block *MODEL_SPACE; Nr: 0
+DEBUG      DxfImport.Import Read_Blocks 303 :  - Found block pos Value 10 at: 962
+INFO       DxfImport.Import Read_Blocks 294 :  - Reading Block *PAPER_SPACE; Nr: 1
+DEBUG      DxfImport.Import Read_Blocks 303 :  - Found block pos Value 10 at: 982
+INFO       DxfImport.Import __init__   94  :  - Creating Contours of Block Nr: 0
+INFO       DxfImport.Import __init__   94  :  - Creating Contours of Block Nr: 1
+INFO       DxfImport.Import __init__   97  :  - Creating Contours of Entities
+INFO       root            load       795 :  - Loaded layers: 1
+INFO       root            load       796 :  - Loaded blocks: 2
+INFO       root            load       800 :  - Block 0 includes 0 Geometries, reduced to 0 Contours, used layers: []
+INFO       root            load       800 :  - Block 1 includes 0 Geometries, reduced to 0 Contours, used layers: []
+INFO       root            load       804 :  - Loaded 328 entity geometries; reduced to 40 contours; used layers: [0]; number of inserts 0
+INFO       root            load       807 :  - Drawing units: inches
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 3.584  Y -> 6.643
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 1.304  Y -> 5.387
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 0
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 2.688  Y -> 6.322
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 3.352  Y -> 5.387
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 1
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 3.653  Y -> 7.315
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 3.384  Y -> 6.923
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 2
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 2.173  Y -> 5.779
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 1.304  Y -> 4.363
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 3
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 4.677  Y -> 7.315
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 5.432  Y -> 5.899
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 4
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 5
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 6.269  Y -> 5.779
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 5.200  Y -> 5.107
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 6
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 6.792  Y -> 4.786
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 6.224  Y -> 4.083
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 7
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 4.736  Y -> 4.274
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 4.928  Y -> 3.811
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 8
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 4.203  Y -> 5.259
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 3.664  Y -> 5.075
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 9
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 3.208  Y -> 4.218
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 3.384  Y -> 3.851
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 10
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 4.221  Y -> 3.731
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 3.152  Y -> 3.059
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 11
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 1.152  Y -> 3.706
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 1.304  Y -> 3.339
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 12
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 1.152  Y -> 2.371
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 2.176  Y -> 1.347
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 13
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 2.688  Y -> 2.226
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 2.880  Y -> 1.763
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 14
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 2.155  Y -> 3.211
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 1.616  Y -> 3.027
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 15
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 4.772  Y -> 1.675
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 3.664  Y -> 2.003
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 16
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 5.256  Y -> 2.170
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 4.688  Y -> 3.027
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 17
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 5.768  Y -> 1.675
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 4.688  Y -> 2.003
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 18
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 6.251  Y -> 3.211
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 5.712  Y -> 3.027
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 19
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 3.864  Y -> 6.843
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 3.384  Y -> 5.899
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 20
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 4.888  Y -> 6.843
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 4.408  Y -> 5.899
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 21
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 4.608  Y -> 5.619
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 4.376  Y -> 5.387
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 22
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 3.864  Y -> 5.819
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 3.384  Y -> 4.875
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 23
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 5.632  Y -> 5.619
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 5.400  Y -> 5.387
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 24
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 6.656  Y -> 4.595
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 5.712  Y -> 5.075
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 25
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 5.632  Y -> 4.595
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 4.688  Y -> 5.075
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 26
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 5.200  Y -> 4.083
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 5.200  Y -> 4.083
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 27
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 6.656  Y -> 3.571
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 5.712  Y -> 4.051
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 28
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 5.912  Y -> 3.771
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 5.200  Y -> 3.059
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 29
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 4.176  Y -> 3.059
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 4.176  Y -> 3.059
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 30
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 4.176  Y -> 2.035
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 4.176  Y -> 2.035
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 31
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 3.584  Y -> 2.547
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 2.640  Y -> 3.027
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 32
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 3.152  Y -> 2.035
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 3.152  Y -> 2.035
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 33
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 4.608  Y -> 2.547
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 3.664  Y -> 3.027
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 34
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 2.328  Y -> 3.339
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 2.328  Y -> 3.339
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 35
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 3.584  Y -> 3.571
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 3.352  Y -> 3.339
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 36
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 2.128  Y -> 4.083
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 2.360  Y -> 3.851
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 37
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 2.560  Y -> 4.595
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 2.328  Y -> 4.363
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 38
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 2.840  Y -> 5.819
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 2.360  Y -> 4.875
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 39
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      DxfImport.myCanvasClass autoscale  242 :  - Autoscaling to extend: PyQt5.QtCore.QRectF(0.0, -7.314686, 7.475669250000001, 7.680420300000001)
+DEBUG      root            optimizeTSP 414 :  - Optimize order of enabled shapes per layer
+DEBUG      root            optimizeTSP 418 :  - Updating order according to TreeView
+DEBUG      root            optimizeTSP 430 :  - Nr. of Shapes 40; Nr. of Shapes in Route 40
+DEBUG      root            optimizeTSP 431 :  - Export Order for start: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+INFO       root            optimizeTSP 454 :  - TSP start values initialised for Layer 0
+DEBUG      root            optimizeTSP 455 :  - Shapes to write: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+DEBUG      root            optimizeTSP 456 :  - Fixed order: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+DEBUG      root            optimizeTSP 464 :  - TSP done with result: Iteration nrs:    4100
+Shape nrs:      41
+Population:     20
+Mutate rate:    0.95
+order:          [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+Start length:   68.1
+Opt. length:    68.1
+Opt. route:     [40, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+DEBUG      root            optimizeTSP 469 :  - New Export Order after TSP: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+DEBUG      Gui.RouteText   shape      97  :  - Hier sollte ich nicht sein
+DEBUG      Gui.RouteText   shape      97  :  - Hier sollte ich nicht sein
+DEBUG      Gui.RouteText   shape      97  :  - Hier sollte ich nicht sein
+DEBUG      Gui.RouteText   shape      97  :  - Hier sollte ich nicht sein
+DEBUG      Gui.RouteText   shape      97  :  - Hier sollte ich nicht sein
+DEBUG      Gui.RouteText   shape      97  :  - Hier sollte ich nicht sein
+DEBUG      Gui.RouteText   shape      97  :  - Hier sollte ich nicht sein
+DEBUG      root            optimizeTSP 414 :  - Optimize order of enabled shapes per layer
+DEBUG      root            optimizeTSP 418 :  - Updating order according to TreeView
+DEBUG      root            optimizeTSP 430 :  - Nr. of Shapes 40; Nr. of Shapes in Route 40
+DEBUG      root            optimizeTSP 431 :  - Export Order for start: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+INFO       root            optimizeTSP 454 :  - TSP start values initialised for Layer 0
+DEBUG      root            optimizeTSP 455 :  - Shapes to write: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+DEBUG      root            optimizeTSP 456 :  - Fixed order: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+DEBUG      root            optimizeTSP 464 :  - TSP done with result: Iteration nrs:    4100
+Shape nrs:      41
+Population:     20
+Mutate rate:    0.95
+order:          [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+Start length:   68.1
+Opt. length:    68.1
+Opt. route:     [40, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+DEBUG      root            optimizeTSP 469 :  - New Export Order after TSP: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39]
+INFO       root            reload     860 :  - Reloading file: C:/Users/ADMIN/Desktop/DXF2GCODE/knot_004.DXF
+INFO       root            load       790 :  - Loading file: C:/Users/ADMIN/Desktop/DXF2GCODE/knot_004.DXF
+DEBUG      DxfImport.Import Get_Line_Pairs 191 :  - Did read 6202 of linepairs from DXF
+INFO       DxfImport.Import __init__   79  :  - Reading DXF Structure
+INFO       DxfImport.Import Read_Blocks 294 :  - Reading Block *MODEL_SPACE; Nr: 0
+DEBUG      DxfImport.Import Read_Blocks 303 :  - Found block pos Value 10 at: 962
+INFO       DxfImport.Import Read_Blocks 294 :  - Reading Block *PAPER_SPACE; Nr: 1
+DEBUG      DxfImport.Import Read_Blocks 303 :  - Found block pos Value 10 at: 982
+INFO       DxfImport.Import __init__   94  :  - Creating Contours of Block Nr: 0
+INFO       DxfImport.Import __init__   94  :  - Creating Contours of Block Nr: 1
+INFO       DxfImport.Import __init__   97  :  - Creating Contours of Entities
+INFO       root            load       795 :  - Loaded layers: 1
+INFO       root            load       796 :  - Loaded blocks: 2
+INFO       root            load       800 :  - Block 0 includes 0 Geometries, reduced to 0 Contours, used layers: []
+INFO       root            load       800 :  - Block 1 includes 0 Geometries, reduced to 0 Contours, used layers: []
+INFO       root            load       804 :  - Loaded 328 entity geometries; reduced to 40 contours; used layers: [0]; number of inserts 0
+INFO       root            load       807 :  - Drawing units: inches
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 3.584  Y -> 6.643
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 1.304  Y -> 5.387
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 0
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 2.688  Y -> 6.322
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 3.352  Y -> 5.387
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 1
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 3.653  Y -> 7.315
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 3.384  Y -> 6.923
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 2
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 2.173  Y -> 5.779
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 1.304  Y -> 4.363
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 3
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 4.677  Y -> 7.315
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 5.432  Y -> 5.899
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 4
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 5
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 6.269  Y -> 5.779
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 5.200  Y -> 5.107
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 6
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 6.792  Y -> 4.786
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 6.224  Y -> 4.083
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 7
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 4.736  Y -> 4.274
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 4.928  Y -> 3.811
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 8
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 4.203  Y -> 5.259
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 3.664  Y -> 5.075
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 9
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 3.208  Y -> 4.218
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 3.384  Y -> 3.851
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 10
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 4.221  Y -> 3.731
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 3.152  Y -> 3.059
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 11
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 1.152  Y -> 3.706
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 1.304  Y -> 3.339
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 12
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 1.152  Y -> 2.371
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 2.176  Y -> 1.347
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 13
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 2.688  Y -> 2.226
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 2.880  Y -> 1.763
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 14
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 2.155  Y -> 3.211
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 1.616  Y -> 3.027
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 15
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 4.772  Y -> 1.675
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 3.664  Y -> 2.003
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 16
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 5.256  Y -> 2.170
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 4.688  Y -> 3.027
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 17
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 5.768  Y -> 1.675
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 4.688  Y -> 2.003
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 18
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 6.251  Y -> 3.211
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 5.712  Y -> 3.027
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 19
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 3.864  Y -> 6.843
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 3.384  Y -> 5.899
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 20
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 4.888  Y -> 6.843
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 4.408  Y -> 5.899
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 21
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 4.608  Y -> 5.619
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 4.376  Y -> 5.387
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 22
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 3.864  Y -> 5.819
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 3.384  Y -> 4.875
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 23
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 5.632  Y -> 5.619
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 5.400  Y -> 5.387
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 24
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 6.656  Y -> 4.595
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 5.712  Y -> 5.075
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 25
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 5.632  Y -> 4.595
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 4.688  Y -> 5.075
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 26
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 5.200  Y -> 4.083
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 5.200  Y -> 4.083
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 27
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 6.656  Y -> 3.571
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 5.712  Y -> 4.051
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 28
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 5.912  Y -> 3.771
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 5.200  Y -> 3.059
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 29
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 4.176  Y -> 3.059
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 4.176  Y -> 3.059
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 30
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 4.176  Y -> 2.035
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 4.176  Y -> 2.035
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 31
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 3.584  Y -> 2.547
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 2.640  Y -> 3.027
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 32
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 3.152  Y -> 2.035
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 3.152  Y -> 2.035
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 33
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 4.608  Y -> 2.547
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 3.664  Y -> 3.027
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 34
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 2.328  Y -> 3.339
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 2.328  Y -> 3.339
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 35
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 3.584  Y -> 3.571
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 3.352  Y -> 3.339
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 36
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 2.128  Y -> 4.083
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 2.360  Y -> 3.851
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 37
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 2.560  Y -> 4.595
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 2.328  Y -> 4.363
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 38
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      Core.Shape      setNearestStPoint 186 :  - Clicked Point: X -> 0.000  Y -> 0.000
+DEBUG      Core.Shape      setNearestStPoint 188 :  - Old Start Point: X -> 2.840  Y -> 5.819
+DEBUG      Core.Shape      setNearestStPoint 198 :  - New Start Point: X -> 2.360  Y -> 4.875
+DEBUG      Core.Shape      AnalyseAndOptimize 177 :  - Analysing the shape for CW direction Nr: 39
+DEBUG      Core.Shape      AnalyseAndOptimize 181 :  - Had to reverse the shape to be CW
+DEBUG      DxfImport.myCanvasClass autoscale  242 :  - Autoscaling to extend: PyQt5.QtCore.QRectF(0.0, -7.314686, 7.475669250000001, 7.680420300000001)
+DEBUG      root            exportShapes 321 :  - Export the enabled shapes
+DEBUG      root            exportShapes 327 :  - Sorted layers:
+DEBUG      root            exportShapes 329 :  - LayerContents[0] = 
+LayerContent
+nr:     0
+name:   0
+shapes: [<gui.canvas2d.ShapeGUI object at 0x05234AD0>, <gui.canvas2d.ShapeGUI object at 0x05247490>, <gui.canvas2d.ShapeGUI object at 0x05247580>, <gui.canvas2d.ShapeGUI object at 0x052476C0>, <gui.canvas2d.ShapeGUI object at 0x052478A0>, <gui.canvas2d.ShapeGUI object at 0x052478F0>, <gui.canvas2d.ShapeGUI object at 0x04DD9B20>, <gui.canvas2d.ShapeGUI object at 0x05265A30>, <gui.canvas2d.ShapeGUI object at 0x0809A490>, <gui.canvas2d.ShapeGUI object at 0x0809A4E0>, <gui.canvas2d.ShapeGUI object at 0x0809A530>, <gui.canvas2d.ShapeGUI object at 0x0809A580>, <gui.canvas2d.ShapeGUI object at 0x0809A5D0>, <gui.canvas2d.ShapeGUI object at 0x0809A620>, <gui.canvas2d.ShapeGUI object at 0x0809A670>, <gui.canvas2d.ShapeGUI object at 0x0809A850>, <gui.canvas2d.ShapeGUI object at 0x0809A8A0>, <gui.canvas2d.ShapeGUI object at 0x0809A8F0>, <gui.canvas2d.ShapeGUI object at 0x0809A940>, <gui.canvas2d.ShapeGUI object at 0x0809A990>, <gui.canvas2d.ShapeGUI object at 0x0809A9E0>, <gui.canvas2d.ShapeGUI object at 0x0809AA30>, <gui.canvas2d.ShapeGUI object at 0x0809AA80>, <gui.canvas2d.ShapeGUI object at 0x0809AAD0>, <gui.canvas2d.ShapeGUI object at 0x0809AB20>, <gui.canvas2d.ShapeGUI object at 0x0809AB70>, <gui.canvas2d.ShapeGUI object at 0x0809ABC0>, <gui.canvas2d.ShapeGUI object at 0x0809AC10>, <gui.canvas2d.ShapeGUI object at 0x0809AC60>, <gui.canvas2d.ShapeGUI object at 0x0809ACB0>, <gui.canvas2d.ShapeGUI object at 0x0809AD00>, <gui.canvas2d.ShapeGUI object at 0x0809AD50>, <gui.canvas2d.ShapeGUI object at 0x0809ADA0>, <gui.canvas2d.ShapeGUI object at 0x0809ADF0>, <gui.canvas2d.ShapeGUI object at 0x0809AE40>, <gui.canvas2d.ShapeGUI object at 0x0809AE90>, <gui.canvas2d.ShapeGUI object at 0x0809AEE0>, <gui.canvas2d.ShapeGUI object at 0x0809AF30>, <gui.canvas2d.ShapeGUI object at 0x0809AF80>, <gui.canvas2d.ShapeGUI object at 0x0087A030>]
+INFO       root            showSaveDialog 535 :  - File: C:/Users/ADMIN/Desktop/DXF2GCODE/knot_004.ngc selected
+INFO       root            showSaveDialog 536 :  - <a href='C:/Users/ADMIN/Desktop/DXF2GCODE/knot_004.ngc'>C:/Users/ADMIN/Desktop/DXF2GCODE/knot_004.ngc</a>
+DEBUG      PostPro.PostProcessorConfig load_config 224 :  - read existing varspace 'C:/Users/ADMIN/Desktop/DXF2GCODE/DXF2GCODE\postpro_config\postpro_config.cfg'
+DEBUG      PostPro.Breaks  __init__   59  :  - Found 0 break layers
+DEBUG      PostPro.PostProcessor exportShapes 296 :  - Beginning export of Layer Nr. 0, Name 0
+DEBUG      PostPro.PostProcessor exportShapes 298 :  - Nr. of Shapes 40; Nr. of Shapes in Route 40
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 0
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 1
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 2
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 3
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 4
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 5
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 6
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 7
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 8
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 9
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 10
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 11
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 12
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 13
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 14
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 15
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 16
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 17
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 18
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 19
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 20
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 21
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 22
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 23
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 24
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 25
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 26
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 27
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 28
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 29
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 30
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 31
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 32
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 33
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 34
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 35
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 36
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 37
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 38
+DEBUG      PostPro.PostProcessor exportShapes 311 :  - Beginning export of Shape Nr: 39
+INFO       PostPro.PostProcessor exportShapes 340 :  - Export to FILE was successful
+DEBUG      Gui.RouteText   shape      97  :  - Hier sollte ich nicht sein
+DEBUG      root            closeEvent 1056:  - Closing
