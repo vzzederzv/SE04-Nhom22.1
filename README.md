@@ -15,7 +15,7 @@ Project Manufacturing furnitures with CNC Machine, using Gcode as script. Mentor
 5. [Technology & Tools](#technology-&-tools)
 
 
-## 1. Idea:
+## 1. Idea
 * Trước đây, gia công cơ khí hầu như được thực hiện hoàn toàn trên máy cơ. Công nghệ này có tính chính xác thấp và hiệu quả kinh tế không cao vì gia công cơ khí qua máy cơ đòi hỏi nhiều thời gian mà năng suất lại thấp, mỗi máy chỉ gồm một thợ sử dụng, dẫn đến hệ quả là sản phẩm không nhiều, năng suất thấp.
 * Từ đó, máy CNC (Computerized Numerically Controlled) ra đời nhằm khắc phục các khuyết điểm của máy cơ, đồng thời phát triển thêm nhiều tính năng ưu việt như: 
   * Điều khiển máy tự động hóa.
@@ -26,18 +26,18 @@ Project Manufacturing furnitures with CNC Machine, using Gcode as script. Mentor
 * Trong ngành công nghiệp sản xuất đồ nội thất, sự đóng góp của máy CNC là không thể thiếu để tạo nên những sản phẩm nội thất vừa chất lượng, mẫu mã đẹp và đa dạng mà vẫn có năng suất cao, hiệu quả.
 * Tuy nhiên, kỹ thuật sử dụng máy CNC lại không hề dễ dàng, đòi hỏi trình độ của nhân công phải nắm rõ kiến thức về công nghệ thông tin, cấu tạo của máy, các quy tắc vận hành. Bài toán thực tế yêu cầu: Thử nghiệm code script bằng G-Code để cho máy cắt CNC thực hiện sản xuất đồ nội thất công nghiệp. Sinh viên sẽ được thực hành thử nghiệm chương trình trên xưởng có máy CNC.
 
-## 2. Goals:
+## 2. Goals
 * Cắt được sản phẩm bằng máy CNC từ script G-Code.
 
-## 3. Business Objective:
+## 3. Business Objective
 * Sử dụng công cụ AlphaCAM Ultimate Router để chuyển file DXF sang G-Code.
 * Tinh chỉnh, tối ưu hóa G-Code.
 * Từ G-Code đã có, sử dụng máy CNC cắt được sản phẩm hoàn chỉnh.
 
-## 4. System Architecture:
+## 4. System Architecture
 * 
 
-## 5. Technology & Tools:
+## 5. Technology & Tools
 * G-Code
 * Github
 * AlphaCAM Ultimate Stimulator
