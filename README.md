@@ -13,6 +13,7 @@ Project Manufacturing furnitures with CNC Machine, using Gcode as script. Mentor
 3. [Business Objective](#business-objective)
 4. [System Architecture](#system-architecture)
 5. [Technology & Tools](#technology-&-tools)
+6. [Project Report](#report)
 
 <a name="idea"> </a>
 ## 1. Idea
@@ -38,7 +39,7 @@ Project Manufacturing furnitures with CNC Machine, using Gcode as script. Mentor
 
 <a name="system-architecture"> </a>
 ## 4. System Architecture
-* 
+...
 
 <a name="technology-&-tools"> </a>
 ## 5. Technology & Tools
@@ -47,4 +48,9 @@ Project Manufacturing furnitures with CNC Machine, using Gcode as script. Mentor
 * AlphaCAM Ultimate Stimulator
 * DXF2GCODE
 * G-Code Stimulator
+
+
+<a name="report"> </a>
+## 6. Project Report
+[Link...](https://github.com/vzzederzv/SE04-Nhom22.1/blob/main/B%C3%A1o%20c%C3%A1o%20CNPM%20SE04-Nh%C3%B3m%2022.1.docx)
 
